@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.pipeworx-io/bright-data",
+  "title": "Bright Data",
+  "description": "Bright Data MCP — Bright Data Web Unlocker + SERP API (brightdata.com)",
+  "version": "0.1.0",
+  "websiteUrl": "https://pipeworx.io/packs/bright-data",
+  "repository": {
+    "url": "https://github.com/pipeworx-io/mcp-bright-data",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://gateway.pipeworx.io/bright-data/mcp"
+    }
+  ]
+}
