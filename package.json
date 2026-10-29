@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-bright-data",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Bright Data MCP — Bright Data Web Unlocker + SERP API (brightdata.com)",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-bright-data": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "bright-data"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-bright-data.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/bright-data",
   "pipeworx": {
-    "sourceHash": "v1-2f355174b57b195b2f942d776b87a350d138a131f62b3f5c63605dbb9fba0b13",
-    "sourceCommit": "60f04b68c347e970c6be94a53439d1364061fc06"
+    "mode": "gateway",
+    "slug": "bright-data",
+    "gatewaySlug": "bright-data",
+    "sourceHash": "v1-422fc1342f386d56a998bd4d718c9847cd70cbbbf35cd494ad5913e6952115ae",
+    "sourceCommit": "4277282d72f9bf55e548b3799aaf737baf22152f"
   }
 }
